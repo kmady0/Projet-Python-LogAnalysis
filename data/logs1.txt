@@ -1,0 +1,10 @@
+2026-11-03 10:00:01 | INFO | 192.168.1.10 | alice | Connexion reussie
+2026-11-03 10:00:05 | WARNING | 10.0.0.5 | bob | Mot de passe incorrect
+2026-11-03 10:00:06 | WARNING | 10.0.0.5 | bob | Mot de passe incorrect
+2026-11-03 10:00:07 | WARNING | 10.0.0.5 | bob | Mot de passe incorrect
+2026-11-03 10:00:08 | ERROR | 10.0.0.5 | bob | Compte bloque
+2026-11-03 10:01:00 | ERROR | 172.16.0.3 | charlie | {"code": 500, "service": "web"}
+
+ligne cassee sans format
+2026-11-03 10:02:00 | CRITICAL | 45.33.12.8 | admin | {"code": 403, "service": "ssh"}
+2026-11-03 10:03:00 | INFO | 192.168.1.10 | alice | Deconnexion
