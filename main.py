@@ -7,7 +7,7 @@ from logs_app.transformation import pipeline, router
 FICHIERS = ["data/logs1.txt", "data/logs2.txt"]
 
 
-def main():
+def main() -> None:
     print("=== 1. Ingestion et transformation ===")
     lignes = lire_plusieurs_fichiers(FICHIERS)
     logs = list(pipeline(lignes))
