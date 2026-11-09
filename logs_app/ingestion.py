@@ -1,5 +1,6 @@
 import json
 from collections.abc import Iterator
+from datetime import datetime
 
 
 def lire_fichier(chemin: str) -> Iterator[str]:
@@ -24,8 +25,12 @@ def parser_ligne(ligne: str) -> dict | None:
     morceaux = ligne.split(" | ")
     if len(morceaux) != 5:
         return None
+    try:
+        date = datetime.strptime(morceaux[0], "%Y-%m-%d %H:%M:%S")
+    except ValueError:
+        return None
     return {
-        "date": morceaux[0],
+        "date": date,
         "niveau": morceaux[1],
         "ip": morceaux[2],
         "utilisateur": morceaux[3],
